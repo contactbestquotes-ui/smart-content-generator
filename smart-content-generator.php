@@ -32,6 +32,18 @@ define( 'SCG_PATH', plugin_dir_path( __FILE__ ) );
 define( 'SCG_URL', plugin_dir_url( __FILE__ ) );
 
 /**
+ * Load Settings
+ */
+require_once SCG_PATH . 'includes/class-settings.php';
+new SCG_Settings();
+
+/**
+ * Load Generator
+ */
+require_once SCG_PATH . 'includes/class-generator.php';
+new SCG_Generator();
+
+/**
  * Load Admin
  */
 if ( is_admin() ) {
